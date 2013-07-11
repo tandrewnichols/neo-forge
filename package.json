@@ -1,0 +1,28 @@
+{
+	"name": "make",
+	"description": "Object factory for neo4j in node.js",
+	"author": {
+		"name": "Andrew Nichols",
+		"email": "anichols@manta.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "http://github.com/tandrewnichols/make"
+	},
+	"scripts": {
+		"test": "mocha -c -u bdd -R Spec -t 5000"
+	},
+	"version": "0.1.0",
+	"main": "./make",
+	"dependencies": {
+		"neo4j": "0.2.x",
+		"async": "0.2.x"
+	},
+	"devDependencies": {
+		"mocha": "1.12.x"
+	},
+	"engines": {
+		"node": "*"
+	},
+	"readmeFilename": "readme.md"
+}
