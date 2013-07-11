@@ -16,7 +16,8 @@
 	"main": "./make",
 	"dependencies": {
 		"neo4j": "0.2.x",
-		"async": "0.2.x"
+		"async": "0.2.x",
+		"xtend": "2.0.x"
 	},
 	"devDependencies": {
 		"mocha": "1.12.x"
