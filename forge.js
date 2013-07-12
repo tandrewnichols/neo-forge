@@ -269,4 +269,5 @@ function buildMethods (req, file, cb) {
  * 4. Look for index in each dir first and require that
  * 5. Navigation properties
  * 6. Make event emitter that emits 'loaded'
+ * 7. stringify objects before storage
  */
