@@ -1,5 +1,5 @@
 {
-	"name": "make",
+	"name": "neo-forge",
 	"description": "Object factory for neo4j in node.js",
 	"author": {
 		"name": "Andrew Nichols",
@@ -7,13 +7,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "http://github.com/tandrewnichols/make"
+		"url": "git@github.com/tandrewnichols/neo-forge"
 	},
+	"website": "github.com/tandrewnichols/neo-forge",
 	"scripts": {
 		"test": "mocha -c -u bdd -R Spec -t 5000"
 	},
 	"version": "0.1.0",
-	"main": "./make",
+	"main": "./forge",
 	"dependencies": {
 		"neo4j": "0.2.x",
 		"async": "0.2.x",
