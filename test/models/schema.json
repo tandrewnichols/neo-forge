@@ -1,0 +1,86 @@
+{
+	"nodes": {
+		"user": {
+			"label": 'User',
+			"required": [
+				"firstName",
+				"lastName",
+				"password",
+				"userName",
+				"email"
+			],
+			"indexed": [
+				"userName",
+				"email"
+			],
+			"relationships": {
+				"plays": "game"
+				"watches": "game"
+				"posts": "comment",
+				"knows": "user",
+				"follows": "user",
+				"registers": "event",
+				"sends": "message",
+				"annotates": "move",
+				"sets": "preferences"
+			}
+		},
+		"game": {
+			"label": 'Game',
+			"required": [
+				"start",
+				"type"
+			],
+			"indexed": [
+				"start"
+			],
+			"relationships": {
+				"branches": "game",
+				"has": "move"
+			}
+		},
+		"move": {
+			"label": 'Move',
+			"required": [
+				"move",
+				"color",
+				"number",
+				"position"
+			],
+			"indexed": [
+				"position"
+			],
+			"relationships": {}
+		},
+		"comment": {
+			"label": "Comment",
+			"required": [
+				"text",
+				"timestamp"
+			],
+			"indexed": [
+				"timestamp"
+			],
+			"relationships": {
+				"on": ["user", "game", "move", "event", "comment"]
+			}
+		}
+	},
+	"relationsips": {
+		"plays": {
+			"from": "user",
+			"to": "game",
+			"required": []
+		},
+		"watches": {
+			"from": "user",
+			"to": "user",
+			"required": []
+		},
+		"branches": {
+			"from": "game",
+			"to": "game",
+			"required": []
+		}
+	}
+}
